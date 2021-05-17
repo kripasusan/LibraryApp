@@ -3,7 +3,6 @@ mongoose.connect('mongodb://localhost:27017/LibraryApp');
 //mongoose.connect('mongodb+srv://userone:userone@fsdfiles.gewcx.mongodb.net/LibraryApp?retryWrites=true&w=majority')
 const Schema = mongoose.Schema;
 
-
 const BookSchema = new Schema({
     title : String,
     author : String,

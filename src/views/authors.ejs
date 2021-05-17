@@ -93,18 +93,26 @@
           <!--/stories-->
           <%for(i=0;i<authors.length;i++){%>
 
-          <div class="row">    
+          <div class="row">
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/images/<%=authors[i].img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="/images/<%=authors[i].image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
+
             <div class="col-md-10 col-sm-9">
-              <h3><%=authors[i].name%></h3>
+              <form action = "../admin/<%=authors[i]._id%>/authordelete" method= "POST">
+                <button style = "float:inline-end; color: orangered" type="submit" class="btn btn-primary pull-right btnNext">Delete</i></button>
+              </form>
+              <h3>
+                <%=authors[i].authorname%>
+              </h3>
               <div class="row">
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%=authors[i].nationality%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><%=authors[i].born%> • <hr> <a href="/authors/<%=i%>" class="text-muted">Read More</a><br></small>
-
+                  <small style="font-family:courier,'new courier';" class="text-muted"><%=authors[i].born%> • <a href="/authors/<%=i%>" class="text-muted">Read More</a> • 
+                    <a href = "authors/<%authors[i]._id%>/authoreditor" class="text-muted">Edit</a>
+                    <br>
+                  </small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
@@ -116,7 +124,7 @@
           <!--/stories-->
           
           
-          <!-- <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a> -->
+          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
         
           
         </div>

@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>
-        <%=title%> | Admin
+        <%=title%>
     </title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,7 +15,6 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
     <link href="/css/styles.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -28,8 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-              <a href="/" class="navbar-brand">Home</a>
-
+                <a href="/" class="navbar-brand">Home</a>
             </div>
             <nav class="collapse navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav">
@@ -41,7 +39,6 @@
                         </li>
                         <%}%>
                 </ul>
-            </nav>
         </div>
     </header>
 
@@ -56,6 +53,7 @@
                 </div>
                 <div class="col-md-5">
                     <div class="well well-lg">
+                        SIGN UP AND USE ADMIN TO ADD NEW ITEMS
                         <div class="row">
                             <div class="col-sm-12">
 
@@ -79,78 +77,31 @@
 
 
     <div class="container">
-
         <div class="row">
 
             <div class="col-md-12">
 
                 <div class="panel">
                     <div class="panel-body">
-                                                        <!-- enctype="multipart/form-data"> -->
+
                         <div class="row">
-                            <div class="signup-form">
-                                <form action="admin/addBook" method="POST"> 
-                                    <h2>Add Book</h2>
-                                    <p class="hint-text">Add a book by filling in required details</p>
-
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="title" placeholder="Title"
-                                            required="true">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="author" placeholder="Author"
-                                            required="true">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="genre" placeholder="Genre"
-                                            required="true">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="description"
-                                            placeholder="Description" required="true">
-                                    </div>
-                                    <p>Upload Image</p>
-                                    <div class="form-group">
-                                        <input type="file" id="myfile" name="image" accept="image/*" required="true">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-success btn-lg btn-block">Add
-                                            New</button>
-                                    </div>
-                                </form>
-                                <form action="admin/addauthor" method="POST">
-                                    <h2>Add Author</h2>
-                                    <p class="hint-text">Add an author by filling in required details</p>
-
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Name"
-                                            required="true">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="nationality"
-                                            placeholder="Nationality" required="true">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="born" placeholder="Born(YYYY)"
-                                            required="true" pattern="[0-9]{1,4}">
-                                    </div>
-                                    <div class=" form-group">
-                                        <input type="text" class="form-control" name="description"
-                                            placeholder="Description" required="true">
-                                    </div>
-                                    <p>Upload Image</p>
-                                    <div class="form-group">
-                                        <input type="file" id="myfile" name="image" accept="image/*" required="true">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-success btn-lg btn-block">Add
-                                            New</button>
-                                    </div>
-                                </form>
+                            <br>
+                            <div class="col-md-2 col-sm-3 text-center">
                             </div>
-
+                            <div class="col-md-10 col-sm-9">
+                                <h3>
+                                    <%=error%>
+                                </h3>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <h4>
+                                            <%=message%>
+                                        </h4>
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                </div>
+                                <br><br>
+                            </div>
                         </div>
                         <hr>
 
@@ -163,7 +114,6 @@
             <!--/col-12-->
         </div>
     </div>
-
 
 
     <hr>
